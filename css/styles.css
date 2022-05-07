@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+li.bar{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+/*nav{
+	background:  #022E51;
+	height: 15vh;
+	height: 80px;
+	width: 100%;
+	position: fixed;
+}
+
+label.logo{
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+
+nav ul{
+	float: right;
+	margin-right: 20px;
+}
+
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+
+nav ul li a{
+	color: white;
+	font-weight: 17px;
+	padding: 7px 13px;
+	border-radius: 4px;
+	text-transform: uppercase;
+}
+
+a.active, label.button:hover, a:hover{
+	background-color: #1b9bff;
+	transition: 0.5s;
+}
+
+.checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+#check{
+	display: none;
+}
+
+@media (max-width: 1080px){
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 1000px){
+	.checkbtn{
+		display: block;
+	}
+
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #2c3e50;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all 0.5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	a:hover, label.button:hover, a.active{
+		background: none;
+		color: #0082e6;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+}*/
+
+*{
+  padding: 0;
+  margin: 0;
+  /*text-decoration: none;
+  list-style: none;*/
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+
+nav{
+  background: #022E51;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a.abc{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active, a.abc:hover{
+  background: #1b9bff;
+  transition: 0.5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1200px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a.abc{
+    font-size: 16px;
+  }
+}
+@media (max-width: 1050px){
+  .checkbtn{
+    display: block;
+  }
+  ul.haut{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li.bar{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a.abc{
+    font-size: 20px;
+  }
+  a.abc:hover, label.button:hover, a.active.abc{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+
+
+/*vidéo*/
+
+.bloc{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	z-index: -50;
+}
+
+.bloc video{
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	top: 50%;
+	left: 50%;
+	z-index: -100;
+	transform: translate(-50%, -50%);
+}
+
+.bloc::before{
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.6;
+	z-index: -99;
+}
+
+/*Offres*/
+
+div.offre{
+	background-color: white;
+	/*background-color: #022E51;*/
+	/*background-color: #70cbf4;*/
+	height: 100vh;
+}
+
+div.carte{
+	height: 180px;
+	width: 375px;
+	background-color: #A3B4C8;
+	display: inline-block;
+	margin-top: 65px;
+	justify-content: space-around;
+	border-radius: 30px;
+	z-index: -50;
+}
+
+/*div.deux{
+	float: right;
+	margin-right: 75px;
+}
+
+div.un{
+	float: left;
+	margin-left: 75px;
+}
+*/
+
+div.carte{
+	display: inline-block;
+	margin-left: 30px;
+	flex-wrap: wrap;
+}
+
+
+
+
+h1.titre{
+	/*background-color: white;*/
+	background-color: #022E51;
+	top: 50px;
+	margin-left: 50px;
+	padding: 50px 0;
+	font-size: 35px;
+	/*font-family: 'Lato', sans-serif;*/
+/*	font-family: 'Montserrat', sans-serif;*/
+	/*font-family: 'Rubik', sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+
+img.paris{
+	height: 180px;
+	border-radius: 30px 0 0 30px;
+	max-width: 120px;
+}
+
+.titre-offre{
+	float: right;
+	margin-top: -52px;
+	margin-right: 15px;
+	color: #022E51;
+}
+
+i.fa-solid{
+	float: right;
+	margin-top: -40px;	
+	margin-right: 230px;
+	color: #022E51;
+}
+
+i.fa-train{
+	margin-right: 235px;
+}
+
+p.prix{
+	color: #022E51;
+	float: right;
+	margin-top: 8px;
+	margin-right: 15px;
+	font-size: 30px;
+}
+
+.desc{
+	margin-top: -130px;
+	margin-left: 70px;
+}
+
+li.des{
+	color: #022E51;
+	font-size: 13px;
+}
+
+section.offres{
+	/*background-color: white;*/
+	background-color: #022E51;
+}
+
+div.carte:hover{
+	transform: scale(1.05);
+	transition: 0.3s;
+	z-index: -50;
+}
+
+div.rangé{
+	margin-top: 0px;
+}
+
+
+
+/*h2.titre-offre.marseille{
+	font-size: 22px;
+}*/
+
+
+
+@media screen and (max-width: 1250px){
+	div.carte ul li.des{
+		width: 100%;
+		font-size: 13px;
+	}
+	p.prix{
+		margin-top: 15px;
+		font-size: 20px;
+	}
+	div.carte{
+		max-width: 350px;
+		display: inline-block;
+	}
+	.titre-offre{
+		font-size: 20px;
+	}
+	h2.berne{
+		font-size: 17px;
+	}
+	/*p.quatre{
+		margin-top: -25px;
+	}*/
+
+	i.fa-solid{
+		margin-right: 200px;
+		margin-top: -45px;
+	}
+	/*li.des.kiev{
+		font-size: 5px;
+	}*/
+}
+
+@media screen and (max-width: 1148px){
+	div.offre{
+		height: 300vh;
+	}
+}
+
+
+/*Partenaire*/
+
+section.partenaire{
+	height: 25vh;
+	/*background-color: white;*/
+	background-color: #70cbf4;
+}
+
+div.partenaire{
+	height: 12.5vh;
+	width: 350px;
+	/*background-color: white;*/
+	/*background-color: #70cbf4;*/
+	margin-left: 50px;
+	margin-top: 6vh;
+	display: inline-block;
+	position: relative;
+	border: 1px solid black;
+/*	border-style: solid;*/
+	border-opacity: 0.1;
+}
+
+img.car{
+	height: 40px;
+	width: 40px;
+	/*margin-top: 10px;
+	margin-left: 20px;*/
+	position: absolute;
+	top: 50%;
+	transform: translate(0%,-50%);
+	margin-left: 30px;
+}
+
+img.car.velo{
+	height: 60px;
+	width: 60px;
+	margin-left: 15px;
+}
+
+div.pub{
+	font-size: 35px;
+	height: 12.5vh;
+	line-height: 12.5vh;
+	text-align: center;
+	color: black;
+}
+
